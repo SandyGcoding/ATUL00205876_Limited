@@ -11,3 +11,5 @@ ATUL00205876_Limited will restrict infrastructure deployment and data storage to
 
 As we look at policies for both EDS and security, we must collaborate with all stakeholders in ATUL00205876_Limited. Where a security policy causes disruption to the day-to-day business operations, we need to look at Business Risk versus Security Risk and design our policies accordingly.
 In addition to the code, my team and I will assist with full due diligence of all vendors and we will document areas which meet our requirements, and areas where further risk assessment is required.
+
+Following the guidance provided by Ruth Lennon in "Wk 8: Terraform 2 and assignment / recording_2", Digital Sovereignty for this assignment will restricted to Irish Digital Sovereignty.
