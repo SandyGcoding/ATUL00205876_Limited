@@ -1,3 +1,16 @@
+sentinel {
+  features = {
+    terraform = true
+  }
+}
+
+
+import "plugin" "tfplan/v2" {
+  config = {
+    "plan_path": "../terraform/tfplan.json"
+  }
+}
+
 policy "validate_Sovereignty" {
   source = "./sovereignty.sentinel"
 }
@@ -17,6 +30,6 @@ policy "validate_instance_type" {
 policy "validate_instance_type_override" {
   source = "./instance_type.sentinel"
   params = {
-    instance_type = "t2.small"
+    valid_instance_types = ["t2.small"]
   }
 }

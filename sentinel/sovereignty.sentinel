@@ -1,3 +1,4 @@
+
 # Parameters and variables
 param provider_name default "AWS"
 param ec2_region default "eu-west-1"

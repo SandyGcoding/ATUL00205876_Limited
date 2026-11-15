@@ -1,15 +1,16 @@
-# Parameters and variables
-param instance_type default "t3.micro"
+# Import the Terraform plan
+import "tfplan/v2" as tfplan
 
-# Valid instance types
-valid_instance_types = ["t3.micro", "t3.small", "t3.medium"]
+# Parameters
+param valid_instance_types default ["t3.micro", "t3.small", "t3.medium"]
 
 ## Rules
 
 # Validate instance type
 validate_instance_type = rule {
-	instance_type in valid_instance_types
-}
+	tfplan.variables.instance_type.value in valid_instance_types
+	}
+
 
 # Main rule to validate instance type
 main = rule {
