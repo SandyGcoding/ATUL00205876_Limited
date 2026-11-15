@@ -1,0 +1,88 @@
+PS G:\My Drive\ATU Donegal\DevOps Pipelines\Terraform Sentinel Assignment 2026\ATUL00205876_Limited\sentinel> sentinel apply
+Execution trace. The information below will show the values of all
+the rules evaluated. Note that some rules may be missing if
+short-circuit logic was taken.
+
+Note that for collection types and long strings, output may be
+truncated; re-run "sentinel apply" with the -json flag to see the
+full contents of these values.
+
+The trace is displayed due to a failed policy.
+
+Pass - validate_Sovereignty.sentinel
+Fail - validate_Sovereignty_override.sentinel
+
+Description:
+  Main rule to validate instance provider and region
+
+validate_Sovereignty_override.sentinel:24:1 - Rule "main"
+  Description:
+    Main rule to validate instance provider and region
+
+  Value:
+    false
+
+validate_Sovereignty_override.sentinel:19:1 - Rule "validate_ec2_region"
+  Description:
+    Validate EC2 region
+
+  Value:
+    false
+
+validate_Sovereignty_override.sentinel:14:1 - Rule "validate_provider"
+  Description:
+    Validate provider name
+
+  Value:
+    true
+
+Pass - validate_instance_type.sentinel
+
+Description:
+  Main rule to validate instance type
+
+validate_instance_type.sentinel:15:1 - Rule "main"
+  Description:
+    Main rule to validate instance type
+
+  Value:
+    true
+
+validate_instance_type.sentinel:10:1 - Rule "validate_instance_type"
+  Description:
+    Validate instance type
+
+  Value:
+    true
+
+Fail - validate_instance_type_override.sentinel
+
+Description:
+  Main rule to validate instance type
+
+validate_instance_type_override.sentinel:15:1 - Rule "main"
+  Description:
+    Main rule to validate instance type
+
+  Value:
+    false
+
+validate_instance_type_override.sentinel:10:1 - Rule "validate_instance_type"
+  Description:
+    Validate instance type
+
+  Value:
+    false
+
+
+
+
+
+
+
+
+
+
+
+
+

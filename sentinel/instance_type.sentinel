@@ -1,0 +1,17 @@
+# Parameters and variables
+param instance_type default "t3.micro"
+
+# Valid instance types
+valid_instance_types = ["t3.micro", "t3.small", "t3.medium"]
+
+## Rules
+
+# Validate instance type
+validate_instance_type = rule {
+	instance_type in valid_instance_types
+}
+
+# Main rule to validate instance type
+main = rule {
+	validate_instance_type
+}

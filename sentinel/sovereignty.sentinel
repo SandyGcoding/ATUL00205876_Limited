@@ -1,0 +1,27 @@
+# Parameters and variables
+param provider_name default "AWS"
+param ec2_region default "eu-west-1"
+
+# Valid provider names
+valid_providers = ["AWS"]
+
+# Valid EC2 regions
+valid_ec2_region = ["eu-west-1"]
+
+## Rules
+
+# Validate provider name
+validate_provider = rule {
+	provider_name in valid_providers
+}
+
+# Validate EC2 region
+validate_ec2_region = rule {
+	ec2_region in valid_ec2_region
+}
+
+# Main rule to validate instance provider and region
+main = rule {
+	validate_provider and
+	validate_ec2_region
+}
