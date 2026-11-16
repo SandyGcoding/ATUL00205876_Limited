@@ -44,3 +44,28 @@ I have tested my policies on sentinel using the CLI.
 At this point I will merge my branch to preserve the existing sentinel code as I am conscious of time.
 If, during testing, I need to update terraform or sentinel I will note the reason accordingly.
 I expect to have to update my sentinel.hcl file to point at my .tf files in terraform.
+
+After creating a branch for tests, I will now look at the tutorials on the sandbox testing available for the unpaid version.
+I will also create a file called test-scenarios.md which will contain the text version of my policies and results and I will save the screenshots accordingly.
+
+Tutorials used:
+https://developer.hashicorp.com/terraform/cli/commands/plan
+
+This turned out to be a disaster. After tail spinning for over 2hrs, I ended up having to create a new assignment folder and clone my respository. Hurray for version control.
+Anyway now that I have gotten rid of all the terraform cloud links, I am going to see if I can finally create a teraform plan file
+
+To ChatGPT Model GPT-6:
+Would you find me an official HashiCorp tutorial which explains how to test Sentinel policies locally using a Terraform plan, without deploying AWS resources or requiring a paid HCP Terraform account, please?
+
+How do I quickly convert my tfplanfile to .json?
+
+
+
+My terraform plan kept (correctly) giving an error as my person AWS region is EU-North-1, but for the assignment I am setting the region to EU-West-1. I changed the region to successfully export the plan but changed it the .json file to EU-West-1 as that is the region included in my policies.
+Please note as tfplan contains my specific credentials, I will not be including it or the .json file in my repo.
+
+
+Due to time wasted, I was not able to re-code the sovereignty.sentnel file to review my terraform plan.
+I did successfully amend the code and policy for instance type.
+
+Very brief overview of my thoughts and disappointment at lack of ease of use.
